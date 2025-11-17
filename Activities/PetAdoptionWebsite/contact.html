@@ -2,73 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dmoney Portfolio</title>
-  <link id="theme-link" rel="stylesheet" href="light.css">
-  <link rel="icon" href="logo-light.png" id="favicon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Paws & Tails</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images-petAdoption/logo2.jpg">
 </head>
 <body>
+  
   <header>
-    <img id="logo" src="logo-light.png" alt="Logo" height="50">
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <button onclick="toggleTheme()">Toggle Theme</button>
-    </nav>
+    <h1>Paws & Tails</h1>
+    <p>We’d love to hear from you!</p>
   </header>
+  
 
-  <main>
-    <section id="about">
-      <h1>Welcome to My Portfolio</h1>
-      <p>I'm Dmoney, a high school student passionate about tech and design.</p>
-    </section>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="adopt.html">Adopt</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <section id="introduction">
+    <h1>Welcome to Paws & Tails</h1>
+    <p>
+      Looking for a furry companion to share your life with? You've come to the right place! Our adoption center is filled with loving pets looking for a forever home. Whether you're interested in a playful pup, a cuddly kitten, or a more mature animal with lots of love to give, we're here to help you find the perfect match.
+    </p>
+  </section>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have questions about adoption, volunteering, or donations, fill out the form below or reach out using the details provided.</p>
 
-    <section id="projects" class="card-container">
-      <div class="card">
-        <h2>Project 1</h2>
-        <p>Description of project 1.</p>
-        <a href="#">View</a>
+    <div class="contact-container">
+      <form action="#" method="post" class="contact-form">
+        <!-- <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button> -->
+      </form>
+
+      <div class="contact-info">
+        <h3>Our Contact Details</h3>
+        <p><strong>Address:</strong> 123 Paw Street, Petville, CA 90001</p>
+        <p><strong>Phone:</strong> (555) 555- 5555</p>
+        <p><strong>Email:</strong> contact@pawsandtails.org</p>
+
+        <h3>Hours</h3>
+        <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+        <p>Saturday: 10:00 AM - 4:00 PM</p>
+        <p>Sunday: Closed</p>
       </div>
-      <div class="card">
-        <h2>Project 2</h2>
-        <p>Description of project 2.</p>
-        <a href="#">View</a>
-      </div>
-      <div class="card">
-        <h2>Project 3</h2>
-        <p>Description of project 3.</p>
-        <a href="#">View</a>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
-    <p>Connect with me:</p>
-    <a href="https://github.com" target="_blank">GitHub</a>
-    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-    <a href="mailto:your@email.com">Email</a>
+<marquee behavior="alternate" direction="right">
+    <p>&copy; 2025 Paws & Tails. | <a href="#privacypolicy">Privacy Policy</a> | <a href="contact.html">Contact Us</a></p>
+</marquee>
   </footer>
-
-  <script>
-    const themeLink = document.getElementById('theme-link');
-    const logo = document.getElementById('logo');
-    const favicon = document.getElementById('favicon');
-
-    // Load theme from localStorage
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setTheme(savedTheme);
-
-    function toggleTheme() {
-      const currentTheme = themeLink.getAttribute('href').includes('light') ? 'dark' : 'light';
-      setTheme(currentTheme);
-      localStorage.setItem('theme', currentTheme);
-    }
-
-    function setTheme(theme) {
-      themeLink.setAttribute('href', theme + '.css');
-      logo.setAttribute('src', `logo-${theme}.png`);
-      favicon.setAttribute('href', `logo-${theme}.png`);
-    }
-  </script>
 </body>
 </html>
